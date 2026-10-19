@@ -1,0 +1,1957 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+  <!-- ========================================================
+       1. THẺ META OPEN GRAPH (RẤT QUAN TRỌNG KHI GỬI LINK)
+       Tạo preview lãng mạn trên Facebook Messenger, Zalo, Telegram
+       ======================================================== -->
+  <title>Món quà nhỏ gửi Bé Yêu nhân ngày 20/10 💌</title>
+  <meta name="title" content="Món quà nhỏ gửi Bé Yêu nhân ngày 20/10 💌">
+  <meta name="description"
+    content="Một món quà đặc biệt tràn ngập yêu thương và những điều ngọt ngào nhất dành riêng cho em bé của anh nhân ngày 20/10. Chạm để mở quà nhé! ✨">
+
+  <!-- Open Graph / Zalo / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourusername.github.io/20-10/">
+  <meta property="og:title" content="Món quà nhỏ gửi Bé Yêu nhân ngày 20/10 💌">
+  <meta property="og:description"
+    content="Một món quà đặc biệt tràn ngập yêu thương và những điều ngọt ngào nhất dành riêng cho em bé của anh nhân ngày 20/10. Chạm để mở quà nhé! ✨">
+  <meta property="og:image"
+    content="./img1.jpg">
+
+  <!-- Twitter Card -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Món quà nhỏ gửi Em Yêu nhân ngày 20/10 💌">
+  <meta property="twitter:description" content="Món quà 20/10 lãng mạn dành riêng cho em. Chạm để khám phá! 💖">
+  <meta property="twitter:image"
+    content="https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=1200&auto=format&fit=crop">
+
+  <!-- Trình duyệt mobile bar color -->
+  <meta name="theme-color" content="#ffdde1">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💌</text></svg>">
+
+  <!-- Google Fonts: Dancing Script (Tiêu đề chữ viết tay lãng mạn) & Quicksand (Nội dung tiếng Việt mượt mà) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Thư viện Canvas Confetti qua CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <style>
+    /* ========================================================
+       1. DESIGN SYSTEM: PALETTE & GLASSMORPHISM
+       ======================================================== -->
+    :root {
+      /* Palette theo yêu cầu thiết kế */
+    --color-primary: #800f2f;
+    /* Đỏ rượu sang trọng cho tiêu đề */
+    --color-primary-light: #c9184a;
+    --color-accent: #ff4b72;
+    /* Hồng rực rỡ cho nút & hiệu ứng */
+    --color-text-body: #4a1525;
+    /* Nâu trầm ấm áp, cực rõ nét */
+    --color-text-muted: #7a3b4e;
+
+    /* Mesh gradient hồng pastel */
+    --bg-mesh: radial-gradient(at 15% 15%, #ffe5ec 0%, transparent 55%),
+    radial-gradient(at 85% 85%, #fecfef 0%, transparent 50%),
+    radial-gradient(at 50% 50%, #ffd1dc 0%, transparent 60%),
+    linear-gradient(135deg, #fff0f3 0%, #ffdde1 50%, #ee9ca7 100%);
+
+    /* Glassmorphism tiêu chuẩn */
+    --glass-bg: rgba(255, 255, 255, 0.62);
+    --glass-border: rgba(255, 255, 255, 0.82);
+    --glass-blur: blur(16px);
+    --glass-radius: 24px;
+    --glass-shadow: 0 16px 40px rgba(255, 105, 145, 0.18),
+    0 4px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg-mesh);
+      color: var(--color-text-body);
+      position: relative;
+    }
+
+    /* Ambient animated lighting orbs */
+    .ambient-glow-wrapper {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .ambient-glow-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.55;
+      animation: orbDrift 14s infinite alternate ease-in-out;
+    }
+
+    .ambient-glow-orb:nth-child(1) {
+      width: 380px;
+      height: 380px;
+      background: #ff9ebb;
+      top: -10%;
+      left: -10%;
+    }
+
+    .ambient-glow-orb:nth-child(2) {
+      width: 420px;
+      height: 420px;
+      background: #fecfef;
+      bottom: -15%;
+      right: -10%;
+      animation-delay: -5s;
+    }
+
+    .ambient-glow-orb:nth-child(3) {
+      width: 320px;
+      height: 320px;
+      background: #ffd6e0;
+      top: 40%;
+      left: 45%;
+      animation-delay: -8s;
+    }
+
+    @keyframes orbDrift {
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      100% {
+        transform: translate(60px, 70px) scale(1.15);
+      }
+    }
+
+    /* Background stars canvas */
+    #stars-canvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Music toggle widget in top corner */
+    .music-pill {
+      position: fixed;
+      top: 18px;
+      right: 18px;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: var(--glass-blur);
+      -webkit-backdrop-filter: var(--glass-blur);
+      border: 1px solid var(--glass-border);
+      padding: 7px 16px;
+      border-radius: 50px;
+      box-shadow: 0 4px 16px rgba(255, 75, 114, 0.14);
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .music-pill:hover {
+      background: rgba(255, 255, 255, 0.9);
+      transform: translateY(-2px);
+    }
+
+    .music-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #333 30%, #ff4b72 31%, #ff4b72 45%, #222 46%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 0.72rem;
+      animation: spinVinyl 3.2s linear infinite;
+      animation-play-state: paused;
+    }
+
+    .music-pill.playing .music-icon {
+      animation-play-state: running;
+    }
+
+    .music-text {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+
+    @keyframes spinVinyl {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* ========================================================
+       SCREEN BASE & VIEW TRANSITIONS
+       ======================================================== */
+    .app-screen {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 10;
+      transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.7s;
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+    }
+
+    .app-screen.hidden {
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+      transform: scale(0.92);
+    }
+
+    /* ========================================================
+       MÀN HÌNH 1: ENVELOPE INTRO (PHONG BÌ 3D LƠ LỬNG)
+       ======================================================== */
+    .screen-envelope-view {
+      text-align: center;
+    }
+
+    .event-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--glass-bg);
+      backdrop-filter: var(--glass-blur);
+      -webkit-backdrop-filter: var(--glass-blur);
+      border: 1px solid var(--glass-border);
+      padding: 8px 24px;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      box-shadow: 0 6px 20px rgba(255, 105, 145, 0.16);
+      margin-bottom: 30px;
+      animation: badgeBob 3s infinite ease-in-out;
+    }
+
+    @keyframes badgeBob {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-5px);
+      }
+    }
+
+    /* 3D Envelope Box */
+    .envelope-3d-wrapper {
+      position: relative;
+      width: 290px;
+      height: 195px;
+      perspective: 1200px;
+      cursor: pointer;
+      margin: 0 auto 34px;
+      animation: envelopeFloating 4.8s ease-in-out infinite;
+      transition: transform 0.3s ease;
+    }
+
+    .envelope-3d-wrapper:hover {
+      transform: scale(1.04);
+    }
+
+    @keyframes envelopeFloating {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(-1deg);
+      }
+
+      50% {
+        transform: translateY(-16px) rotate(1.5deg);
+      }
+    }
+
+    .envelope-core {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(145deg, #ffffff, #ffe9ee);
+      border-radius: 16px;
+      box-shadow: 0 25px 55px rgba(255, 75, 114, 0.25), 0 8px 18px rgba(0, 0, 0, 0.04);
+      border: 1.5px solid rgba(255, 255, 255, 0.95);
+      overflow: hidden;
+      transform-style: preserve-3d;
+    }
+
+    /* Envelope Folds */
+    .envelope-fold-l {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 145px solid #ffd4de;
+      border-top: 100px solid transparent;
+      z-index: 3;
+    }
+
+    .envelope-fold-r {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-right: 145px solid #ffccd8;
+      border-top: 100px solid transparent;
+      z-index: 3;
+    }
+
+    .envelope-fold-b {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 145px solid transparent;
+      border-right: 145px solid transparent;
+      border-bottom: 110px solid #ffc0ce;
+      z-index: 4;
+    }
+
+    .envelope-top-flap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 145px solid transparent;
+      border-right: 145px solid transparent;
+      border-top: 115px solid #ff9ebb;
+      transform-origin: top center;
+      transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), z-index 0.2s 0.35s;
+      z-index: 5;
+      filter: drop-shadow(0 4px 6px rgba(255, 80, 120, 0.22));
+    }
+
+    .envelope-3d-wrapper.opened .envelope-top-flap {
+      transform: rotateX(180deg);
+      z-index: 1;
+    }
+
+    /* Inside card peek */
+    .envelope-card-peek {
+      position: absolute;
+      top: 18px;
+      left: 20px;
+      right: 20px;
+      height: 150px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      transition: transform 0.85s 0.35s cubic-bezier(0.2, 0.8, 0.3, 1);
+    }
+
+    .envelope-3d-wrapper.opened .envelope-card-peek {
+      transform: translateY(-90px);
+    }
+
+    .peek-stamp-icon {
+      font-size: 2.2rem;
+      margin-bottom: 6px;
+      animation: pulseStamp 1.6s infinite;
+    }
+
+    @keyframes pulseStamp {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.16);
+      }
+    }
+
+    .peek-address-name {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.65rem;
+      color: var(--color-primary);
+      font-weight: 700;
+      text-align: center;
+    }
+
+    /* Wax seal button */
+    .envelope-wax-badge {
+      position: absolute;
+      top: 88px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 54px;
+      height: 54px;
+      background: radial-gradient(circle, #ff3b68 0%, #d41444 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.55rem;
+      box-shadow: 0 6px 18px rgba(212, 20, 68, 0.45), inset 0 2px 5px rgba(255, 255, 255, 0.4);
+      z-index: 6;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+
+    .envelope-3d-wrapper.opened .envelope-wax-badge {
+      opacity: 0;
+      transform: translateX(-50%) scale(0.4);
+    }
+
+    /* Button open */
+    .btn-open-envelope {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: linear-gradient(135deg, var(--color-accent) 0%, #ff758c 100%);
+      color: #ffffff;
+      border: none;
+      padding: 16px 40px;
+      border-radius: 50px;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 1.18rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(255, 75, 114, 0.42);
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      animation: pulseGlowBtn 2.3s infinite;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-open-envelope:hover {
+      transform: translateY(-3px) scale(1.04);
+      box-shadow: 0 16px 36px rgba(255, 75, 114, 0.52);
+    }
+
+    .btn-open-envelope:active {
+      transform: translateY(1px) scale(0.98);
+    }
+
+    .btn-open-envelope::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.38), transparent);
+      transform: rotate(45deg);
+      animation: shimmerLight 3.2s infinite;
+    }
+
+    @keyframes shimmerLight {
+      0% {
+        transform: translateX(-100%) rotate(45deg);
+      }
+
+      22%,
+      100% {
+        transform: translateX(100%) rotate(45deg);
+      }
+    }
+
+    @keyframes pulseGlowBtn {
+      0% {
+        box-shadow: 0 10px 30px rgba(255, 75, 114, 0.35), 0 0 0 0 rgba(255, 75, 114, 0.5);
+      }
+
+      70% {
+        box-shadow: 0 10px 30px rgba(255, 75, 114, 0.35), 0 0 0 16px rgba(255, 75, 114, 0);
+      }
+
+      100% {
+        box-shadow: 0 10px 30px rgba(255, 75, 114, 0.35), 0 0 0 0 rgba(255, 75, 114, 0);
+      }
+    }
+
+    .sub-hint-text {
+      margin-top: 14px;
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      font-weight: 500;
+    }
+
+    /* ========================================================
+       MÀN HÌNH 2: PLAYFUL QUESTION (CÂU HỎI TRÊU ĐÙA ĐÁNG YÊU)
+       ======================================================== */
+    .screen-question-view {
+      text-align: center;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .question-card {
+      width: 100%;
+      background: var(--glass-bg);
+      backdrop-filter: var(--glass-blur);
+      -webkit-backdrop-filter: var(--glass-blur);
+      border: 1.5px solid var(--glass-border);
+      border-radius: var(--glass-radius);
+      padding: 36px 26px 34px;
+      box-shadow: var(--glass-shadow);
+      position: relative;
+      animation: questionPopIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes questionPopIn {
+      0% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.92);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .question-icon-wrapper {
+      width: 72px;
+      height: 72px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      margin: 0 auto 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      box-shadow: 0 8px 24px rgba(255, 75, 114, 0.2);
+      animation: cuteWiggle 3s infinite ease-in-out;
+    }
+
+    @keyframes cuteWiggle {
+
+      0%,
+      100% {
+        transform: rotate(0deg) scale(1);
+      }
+
+      25% {
+        transform: rotate(-8deg) scale(1.05);
+      }
+
+      75% {
+        transform: rotate(8deg) scale(1.05);
+      }
+    }
+
+    .question-tag {
+      display: inline-block;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--color-primary);
+      background: rgba(255, 255, 255, 0.8);
+      padding: 4px 16px;
+      border-radius: 50px;
+      margin-bottom: 12px;
+    }
+
+    .question-title {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.3rem;
+      color: var(--color-primary);
+      line-height: 1.25;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .question-desc {
+      font-size: 1.08rem;
+      color: var(--color-text-body);
+      line-height: 1.6;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    /* Container 2 nút */
+    .question-btn-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      position: relative;
+      min-height: 60px;
+    }
+
+    .btn-yes {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: linear-gradient(135deg, var(--color-accent) 0%, #ff758c 100%);
+      color: #ffffff;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(255, 75, 114, 0.4);
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+      z-index: 5;
+    }
+
+    .btn-yes:active {
+      transform: scale(0.96);
+    }
+
+    .btn-no {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.85);
+      color: var(--color-text-muted);
+      border: 1.5px solid rgba(255, 255, 255, 0.95);
+      padding: 14px 24px;
+      border-radius: 50px;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 1.02rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.15s ease-out, background 0.2s ease;
+      touch-action: none;
+      z-index: 10;
+    }
+
+    .runaway-notice {
+      margin-top: 18px;
+      font-size: 0.88rem;
+      color: var(--color-primary-light);
+      font-weight: 600;
+      min-height: 22px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .runaway-notice.visible {
+      opacity: 1;
+    }
+
+    /* ========================================================
+       MÀN HÌNH 3: MAIN ANTIGRAVITY EXPERIENCE
+       - Trên: Dải ảnh Polaroid trôi nổi không trọng lực
+       - Giữa: Bức thư Glassmorphism Typewriter
+       - Dưới: Nút "Nhận 1000 cái ôm 🤗" kèm bộ đếm & bắn tim bay lên
+       ======================================================== */
+    .screen-main-experience {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 10px 14px 20px;
+      overflow: hidden;
+    }
+
+    /* Top & Around: Lớp ảnh Polaroid trôi nổi không trọng lực */
+    .antigravity-viewport {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 12;
+    }
+
+    .polaroid-item {
+      position: absolute;
+      width: 110px;
+      height: 140px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 9px;
+      padding: 6px 6px 18px 6px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(255, 105, 145, 0.16);
+      cursor: grab;
+      pointer-events: auto;
+      touch-action: none;
+      transition: box-shadow 0.25s, transform 0.08s ease-out;
+      will-change: transform;
+    }
+
+    .polaroid-item:active {
+      cursor: grabbing;
+      box-shadow: 0 22px 45px rgba(255, 75, 114, 0.4);
+      z-index: 200 !important;
+    }
+
+    .polaroid-item img {
+      width: 100%;
+      height: 98px;
+      object-fit: cover;
+      border-radius: 5px;
+      pointer-events: none;
+      display: block;
+      background: #ffeef2;
+    }
+
+    .polaroid-item .polaroid-caption {
+      font-family: 'Dancing Script', cursive;
+      text-align: center;
+      font-size: 0.92rem;
+      color: var(--color-primary);
+      margin-top: 5px;
+      pointer-events: none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: 700;
+    }
+
+    /* Washi tape decor */
+    .polaroid-item::before {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 32px;
+      height: 14px;
+      background: rgba(255, 182, 193, 0.75);
+      backdrop-filter: blur(2px);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      border-radius: 2px;
+    }
+
+    /* Bong bóng tim bay bổng */
+    .bubble-float-item {
+      position: absolute;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.48);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1.2px solid rgba(255, 255, 255, 0.88);
+      box-shadow: 0 6px 18px rgba(255, 105, 145, 0.18);
+      cursor: pointer;
+      pointer-events: auto;
+      touch-action: none;
+      will-change: transform;
+    }
+
+    .bubble-float-item span {
+      pointer-events: none;
+      font-size: 1.35rem;
+      animation: bubblePulseAnim 2.2s infinite ease-in-out;
+    }
+
+    @keyframes bubblePulseAnim {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.18);
+      }
+    }
+
+    /* Giữa: Bức thư Glassmorphism Typewriter */
+    .letter-stage-card {
+      position: relative;
+      width: 100%;
+      max-width: 470px;
+      flex: 1;
+      max-height: 48vh;
+      min-height: 220px;
+      background: var(--glass-bg);
+      backdrop-filter: var(--glass-blur);
+      -webkit-backdrop-filter: var(--glass-blur);
+      border: 1.5px solid var(--glass-border);
+      border-radius: var(--glass-radius);
+      padding: 18px 18px 12px;
+      box-shadow: var(--glass-shadow);
+      z-index: 20;
+      display: flex;
+      flex-direction: column;
+      margin-top: auto;
+      margin-bottom: 8px;
+      animation: letterEntrance 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes letterEntrance {
+      0% {
+        opacity: 0;
+        transform: translateY(35px) scale(0.94);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .letter-top-info {
+      text-align: center;
+      margin-bottom: 12px;
+      position: relative;
+    }
+
+    .letter-badge-tag {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      color: var(--color-primary);
+      background: rgba(255, 255, 255, 0.85);
+      padding: 4px 15px;
+      border-radius: 20px;
+      margin-bottom: 6px;
+      box-shadow: 0 2px 8px rgba(255, 75, 114, 0.1);
+    }
+
+    .letter-main-title {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.15rem;
+      color: var(--color-primary);
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    /* Vùng chứa văn bản cuộn mượt */
+    .letter-body-scroll {
+      flex: 1;
+      overflow-y: auto;
+      padding: 8px 6px 16px;
+      margin-bottom: 10px;
+      scroll-behavior: smooth;
+      scrollbar-width: thin;
+      scrollbar-color: #ff9ebb transparent;
+    }
+
+    .letter-body-scroll::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    .letter-body-scroll::-webkit-scrollbar-thumb {
+      background: #ff9ebb;
+      border-radius: 10px;
+    }
+
+    .typewriter-text-area {
+      font-size: 1.05rem;
+      line-height: 1.74;
+      color: var(--color-text-body);
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-weight: 500;
+    }
+
+    .cursor-blinking {
+      display: inline-block;
+      width: 2.2px;
+      height: 1.2em;
+      background: var(--color-accent);
+      vertical-align: text-bottom;
+      margin-left: 2px;
+      animation: cursorBlink 0.8s infinite;
+    }
+
+    @keyframes cursorBlink {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+    }
+
+    .letter-replay-bar {
+      display: flex;
+      justify-content: flex-end;
+      border-top: 1px dashed rgba(255, 140, 165, 0.35);
+      padding-top: 8px;
+    }
+
+    .btn-replay-small {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.8);
+      color: var(--color-text-muted);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: 'Quicksand', sans-serif;
+      transition: all 0.2s ease;
+    }
+
+    .btn-replay-small:hover {
+      background: #ffffff;
+      color: var(--color-primary);
+    }
+
+    /* Dưới: Nút "Nhận 1000 cái ôm 🤗" kèm bộ đếm & bắn hoa hồng */
+    .hug-action-panel {
+      position: relative;
+      width: 100%;
+      max-width: 470px;
+      z-index: 30;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+      margin-bottom: 8px;
+    }
+
+    .hug-counter-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      padding: 5px 16px;
+      border-radius: 50px;
+      box-shadow: 0 4px 12px rgba(255, 75, 114, 0.15);
+      border: 1px solid var(--glass-border);
+    }
+
+    .hug-count-number {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--color-accent);
+      transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .hug-count-number.pop {
+      transform: scale(1.35);
+    }
+
+    .btn-send-hugs {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--color-accent) 0%, #ff758c 100%);
+      color: #ffffff;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 50px;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(255, 75, 114, 0.4);
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-send-hugs:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(255, 75, 114, 0.5);
+    }
+
+    .btn-send-hugs:active {
+      transform: scale(0.97);
+    }
+
+    /* Floating particles spawned from hugs button */
+    .fountain-particle {
+      position: fixed;
+      pointer-events: none;
+      z-index: 9999;
+      font-size: 1.8rem;
+      animation: particleFlyUp 1.6s cubic-bezier(0.1, 0.8, 0.2, 1) forwards;
+    }
+
+    @keyframes particleFlyUp {
+      0% {
+        opacity: 1;
+        transform: translate(-50%, 0) scale(0.5) rotate(0deg);
+      }
+
+      50% {
+        opacity: 0.95;
+        transform: translate(calc(-50% + var(--rand-x)), calc(-50vh - var(--rand-y))) scale(1.35) rotate(var(--rand-rot));
+      }
+
+      100% {
+        opacity: 0;
+        transform: translate(calc(-50% + var(--rand-x) * 1.3), -85vh) scale(0.9) rotate(calc(var(--rand-rot) * 2));
+      }
+    }
+
+    /* Modal phóng to xem ảnh Polaroid khi chạm vào */
+    .photo-zoom-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(47, 13, 22, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 3000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .photo-zoom-modal.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .photo-zoom-card {
+      background: #ffffff;
+      padding: 12px 12px 24px;
+      border-radius: 18px;
+      max-width: 90%;
+      max-height: 80vh;
+      box-shadow: 0 25px 65px rgba(0, 0, 0, 0.45);
+      text-align: center;
+      transform: scale(0.88);
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .photo-zoom-modal.active .photo-zoom-card {
+      transform: scale(1);
+    }
+
+    .photo-zoom-card img {
+      width: 100%;
+      max-height: 56vh;
+      object-fit: contain;
+      border-radius: 10px;
+      background: #fff0f3;
+    }
+
+    .photo-zoom-caption {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.65rem;
+      color: var(--color-primary);
+      margin-top: 12px;
+      font-weight: 700;
+    }
+
+    .btn-close-zoom {
+      margin-top: 16px;
+      background: rgba(255, 255, 255, 0.25);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      padding: 9px 26px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: 700;
+      font-family: 'Quicksand', sans-serif;
+      transition: all 0.2s;
+    }
+
+    .btn-close-zoom:hover {
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    /* Small mobile screen adjustments */
+    @media (max-width: 480px) {
+      .envelope-3d-wrapper {
+        width: 260px;
+        height: 180px;
+      }
+
+      .envelope-fold-l,
+      .envelope-fold-r {
+        border-left-width: 130px;
+        border-right-width: 130px;
+      }
+
+      .envelope-fold-b {
+        border-left-width: 130px;
+        border-right-width: 130px;
+        border-bottom-width: 100px;
+      }
+
+      .envelope-top-flap {
+        border-left-width: 130px;
+        border-right-width: 130px;
+        border-top-width: 105px;
+      }
+
+      .envelope-wax-badge {
+        top: 80px;
+        width: 48px;
+        height: 48px;
+        font-size: 1.35rem;
+      }
+
+      .question-card {
+        padding: 28px 20px 24px;
+      }
+
+      .question-title {
+        font-size: 2rem;
+      }
+
+      .letter-stage-card {
+        padding: 16px 14px 10px;
+        flex: 1 1 auto;
+        max-height: 42vh;
+        min-height: 180px;
+        margin-bottom: 10px;
+      }
+
+      .hug-action-panel {
+        margin-bottom: 20px;
+      }
+
+      .btn-send-hugs {
+        padding: 12px 20px;
+        font-size: 1.02rem;
+      }
+
+      .letter-main-title {
+        font-size: 1.9rem;
+      }
+
+      .typewriter-text-area {
+        font-size: 0.98rem;
+        line-height: 1.68;
+      }
+
+      .polaroid-item {
+        width: 95px;
+        height: 122px;
+        padding: 5px 5px 14px 5px;
+      }
+
+      .polaroid-item img {
+        height: 82px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Ambient Glowing Mesh Orbs -->
+  <div class="ambient-glow-wrapper">
+    <div class="ambient-glow-orb"></div>
+    <div class="ambient-glow-orb"></div>
+    <div class="ambient-glow-orb"></div>
+  </div>
+
+  <!-- Background Twinkling Stars Canvas -->
+  <canvas id="stars-canvas"></canvas>
+
+  <!-- Music Toggle Pill (Top Right) -->
+  <div class="music-pill" id="music-pill" title="Bật / Tắt nhạc">
+    <div class="music-icon">🎵</div>
+    <span class="music-text" id="music-status">Phát nhạc</span>
+  </div>
+
+  <!-- Audio Element (Không dùng autoplay, gọi play() qua click) -->
+  <audio id="bg-audio" loop preload="auto"></audio>
+
+  <!-- ========================================================
+       MÀN HÌNH 1: ENVELOPE INTRO
+       ======================================================== -->
+  <div class="app-screen screen-envelope-view" id="screen-envelope">
+
+    <div class="event-badge">
+      <span>✨</span>
+      <span>20 Tháng 10 - Ngày Của Bé</span>
+      <span>✨</span>
+    </div>
+
+    <!-- Phong bì thư 3D -->
+    <div class="envelope-3d-wrapper" id="envelope-trigger">
+      <div class="envelope-core">
+        <div class="envelope-card-peek">
+          <div class="peek-stamp-icon">💌</div>
+          <div class="peek-address-name" id="envelope-to-name">Gửi Bé Yêu</div>
+        </div>
+        <div class="envelope-top-flap"></div>
+        <div class="envelope-fold-l"></div>
+        <div class="envelope-fold-r"></div>
+        <div class="envelope-fold-b"></div>
+        <div class="envelope-wax-badge" title="Chạm để mở">❤️</div>
+      </div>
+    </div>
+
+    <button class="btn-open-envelope" id="btn-open-envelope">
+      <span>Chạm để mở quà</span>
+      <span style="font-size: 1.25rem;">💝</span>
+    </button>
+    <p class="sub-hint-text">Bật âm lượng để tận hưởng trọn vẹn nhé!</p>
+  </div>
+
+  <!-- ========================================================
+       MÀN HÌNH 2: PLAYFUL QUESTION (CÂU HỎI TRÊU ĐÙA)
+       ======================================================== -->
+  <div class="app-screen screen-question-view hidden" id="screen-question">
+    <div class="question-card" id="question-card">
+      <div class="question-icon-wrapper">🌸</div>
+      <span class="question-tag">Bật Mí Nhỏ</span>
+      <h2 class="question-title">Hôm nay là 20/10...</h2>
+      <p class="question-desc" id="question-text">
+        <span id="question-recipient-name">Em Yêu</span> ơi, em có muốn nhận món quà đặc biệt từ anh không? ✨
+      </p>
+
+      <div class="question-btn-row" id="question-btn-container">
+        <button class="btn-yes" id="btn-yes">
+          <span>Muốn lắm luôn</span>
+          <span>💖</span>
+        </button>
+        <button class="btn-no" id="btn-no">
+          <span>Không thèm</span>
+          <span>😝</span>
+        </button>
+      </div>
+
+      <div class="runaway-notice" id="runaway-notice">Không thoát được đâu nà, bấm nút hồng đi mà! 🥺</div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       MÀN HÌNH 3: MAIN ANTIGRAVITY EXPERIENCE
+       ======================================================== -->
+  <div class="app-screen screen-main-experience hidden" id="screen-experience">
+
+    <!-- Lớp vật lý các ảnh Polaroid & bóng tim bay lơ lửng -->
+    <div class="antigravity-viewport" id="antigravity-viewport"></div>
+
+    <!-- Giữa: Bức thư Glassmorphism Typewriter -->
+    <div class="letter-stage-card" id="letter-card">
+      <div class="letter-top-info">
+        <span class="letter-badge-tag">Happy Vietnamese Women's Day</span>
+        <h1 class="letter-main-title" id="letter-recipient-title">Gửi Em Yêu 🌸</h1>
+      </div>
+
+      <div class="letter-body-scroll" id="letter-scroll-area">
+        <div class="typewriter-text-area" id="typewriter-content"></div>
+        <span class="cursor-blinking" id="cursor-blinking"></span>
+      </div>
+
+      <div class="letter-replay-bar">
+        <button class="btn-replay-small" id="btn-replay-letter">
+          <span>🔄</span>
+          <span>Đọc lại thư</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Dưới: Nút "Nhận 1000 cái ôm 🤗" kèm bộ đếm & bắn tim bay lên -->
+    <div class="hug-action-panel">
+      <div class="hug-counter-badge">
+        <span>Đã nhận:</span>
+        <span class="hug-count-number" id="hug-counter">1000</span>
+        <span>cái ôm & nụ hôn 🤗</span>
+      </div>
+      <button class="btn-send-hugs" id="btn-send-hugs">
+        <span>Nhận thêm 1000 cái ôm & hoa hồng</span>
+        <span style="font-size: 1.3rem;">🌹</span>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Modal phóng to xem chi tiết ảnh Polaroid -->
+  <div class="photo-zoom-modal" id="photo-modal">
+    <div class="photo-zoom-card">
+      <img id="modal-img" src="" alt="Kỷ niệm">
+      <div class="photo-zoom-caption" id="modal-caption">Khoảnh khắc đáng nhớ 💕</div>
+    </div>
+    <button class="btn-close-zoom" id="modal-close">Đóng lại ✨</button>
+  </div>
+
+  <!-- ========================================================
+       JAVASCRIPT & CẤU HÌNH TẬP TRUNG (EASY CONFIG)
+       ======================================================== -->
+  <script>
+    /* ========================================================
+       1. CẤU HÌNH TẬP TRUNG (EASY CONFIG)
+       Dễ dàng chỉnh sửa thông tin tại đây:
+       ======================================================== */
+    const CONFIG = {
+      // 1. Tên của người yêu (hiển thị trên phong bì, câu hỏi và thiệp)
+      girlfriendName: "Bé Yêu",
+
+      // 2. Lời chúc 20/10 ngọt ngào, ấm áp (dùng \n để xuống dòng)
+      wishMessage: `Gửi bé yêu của anh,\n\nAnh vốn không phải là người giỏi nói những lời hoa mỹ, nhưng mỗi khi nghĩ đến bé, anh lại muốn dành tặng bé tất cả những điều tốt đẹp nhất trên thế gian này. 🌸\n\n20/10 năm nay, chúc em bé của anh luôn bình yên và hạnh phúc. Nếu có ngày nào đó những bộn bề ngoài kia làm bé thấy mỏi mệt, hãy nhớ là phía sau luôn có vòng tay của anh chờ bé về tựa vào. Anh không hứa sẽ hái sao trên trời cho bé, nhưng anh hứa sẽ luôn dành cho bé sự ưu tiên trọn vẹn nhất, sự kiên nhẫn dịu dàng nhất từ trái tim anh.\n\nCảm ơn bé đã luôn đồng hành, thấu hiểu và là động lực to lớn của anh mỗi ngày. Yêu bé rất nhiều! ❤️✨`,
+
+      // 3. Mảng link ảnh kỷ niệm dạng Polaroid trôi nổi (đường dẫn tương đối cùng thư mục)
+      images: [
+        "./img1.jpg",
+        "./img2.jpg",
+        "./img3.jpg",
+        "./img4.jpg"
+      ],
+
+      // Chú thích ý nghĩa cho từng bức ảnh
+      captions: [
+        "Khoảnh khắc đáng yêu của bé ✌️💕",
+        "Đêm giao thừa bên bé ✨",
+        "Bình yên sau lưng anh 🛵❤️",
+        "Chuyến đi ngập tràn tiếng cười 🌸"
+      ],
+
+      // 4. File nhạc nền MP3 (sẽ kích hoạt ngay khi chạm mở phong bì ở Màn 1)
+      musicUrl: "./music.mp3"
+    };
+
+    /* Ảnh dự phòng lãng mạn khi chưa kịp thêm ảnh local */
+    const BACKUP_IMAGES = [
+      "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=500&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=500&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=500&auto=format&fit=crop&q=80"
+    ];
+
+    /* Nhạc piano tình yêu dự phòng online nếu chưa có file local music.mp3 */
+    const BACKUP_MUSIC_URL = "https://cdn.jsdelivr.net/gh/Xnuvers007/valentine@main/music/softlove-emptybottle.mp3";
+
+    /* ========================================================
+       2. KHỞI TẠO DOM & BIẾN TRẠNG THÁI
+       ======================================================== */
+    const screenEnvelope = document.getElementById('screen-envelope');
+    const screenQuestion = document.getElementById('screen-question');
+    const screenExperience = document.getElementById('screen-experience');
+
+    const envelopeWrapper = document.getElementById('envelope-trigger');
+    const btnOpenEnvelope = document.getElementById('btn-open-envelope');
+    const envelopeToName = document.getElementById('envelope-to-name');
+    const questionRecipientName = document.getElementById('question-recipient-name');
+    const letterRecipientTitle = document.getElementById('letter-recipient-title');
+
+    const btnYes = document.getElementById('btn-yes');
+    const btnNo = document.getElementById('btn-no');
+    const runawayNotice = document.getElementById('runaway-notice');
+
+    const typewriterContent = document.getElementById('typewriter-content');
+    const cursorBlinking = document.getElementById('cursor-blinking');
+    const letterScrollArea = document.getElementById('letter-scroll-area');
+    const btnReplayLetter = document.getElementById('btn-replay-letter');
+
+    const hugCounter = document.getElementById('hug-counter');
+    const btnSendHugs = document.getElementById('btn-send-hugs');
+
+    const bgAudio = document.getElementById('bg-audio');
+    const musicPill = document.getElementById('music-pill');
+    const musicStatus = document.getElementById('music-status');
+
+    const antigravityViewport = document.getElementById('antigravity-viewport');
+    const photoModal = document.getElementById('photo-modal');
+    const modalImg = document.getElementById('modal-img');
+    const modalCaption = document.getElementById('modal-caption');
+    const modalClose = document.getElementById('modal-close');
+
+    // Cập nhật tên người yêu theo cấu hình
+    if (CONFIG.girlfriendName) {
+      envelopeToName.textContent = `Gửi ${CONFIG.girlfriendName} 💌`;
+      questionRecipientName.textContent = CONFIG.girlfriendName;
+      letterRecipientTitle.textContent = `Gửi ${CONFIG.girlfriendName} 🌸`;
+      document.title = `Món quà nhỏ gửi ${CONFIG.girlfriendName} nhân ngày 20/10 💌`;
+    }
+
+    // Thiết lập nhạc nền
+    bgAudio.src = CONFIG.musicUrl;
+    bgAudio.addEventListener('error', function () {
+      if (bgAudio.src !== BACKUP_MUSIC_URL) {
+        console.log("Sử dụng nhạc nền dự phòng...");
+        bgAudio.src = BACKUP_MUSIC_URL;
+        if (hasEnvelopeOpened) {
+          playAudioSafe();
+        }
+      }
+    });
+
+    function playAudioSafe() {
+      try {
+        const promise = bgAudio.play();
+        if (promise !== undefined) {
+          promise.then(() => {
+            musicPill.classList.add('playing');
+            musicStatus.textContent = "Đang phát";
+          }).catch(err => {
+            console.log("Trình duyệt tạm chặn âm thanh:", err);
+            musicPill.classList.remove('playing');
+            musicStatus.textContent = "Bật nhạc";
+          });
+        }
+      } catch (err) {
+        console.log("Audio play error:", err);
+      }
+    }
+
+    function toggleMusic() {
+      if (bgAudio.paused) {
+        playAudioSafe();
+      } else {
+        bgAudio.pause();
+        musicPill.classList.remove('playing');
+        musicStatus.textContent = "Đã tạm dừng";
+      }
+    }
+
+    musicPill.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleMusic();
+    });
+
+    /* ========================================================
+       3. MÀN HÌNH 1: MỞ PHONG BÌ & CHUYỂN SANG MÀN HÌNH 2
+       ======================================================== */
+    let hasEnvelopeOpened = false;
+
+    function handleOpenEnvelope() {
+      if (hasEnvelopeOpened) return;
+      hasEnvelopeOpened = true;
+
+      // 1. Kích hoạt phát nhạc trực tiếp trong sự kiện chạm người dùng
+      playAudioSafe();
+
+      // 2. Mở nắp phong bì 3D
+      envelopeWrapper.classList.add('opened');
+
+      // 3. Bắn confetti rực rỡ
+      triggerConfettiBurst();
+
+      // 4. Chuyển sang Màn hình 2 sau 850ms
+      setTimeout(() => {
+        screenEnvelope.classList.add('hidden');
+        screenQuestion.classList.remove('hidden');
+      }, 850);
+    }
+
+    btnOpenEnvelope.addEventListener('click', handleOpenEnvelope);
+    envelopeWrapper.addEventListener('click', handleOpenEnvelope);
+
+    function triggerConfettiBurst() {
+      if (typeof confetti !== 'function') return;
+      confetti({
+        particleCount: 80,
+        spread: 90,
+        origin: { y: 0.6 },
+        colors: ['#ff4b72', '#ff85a2', '#ffccd5', '#ffd700', '#ffffff']
+      });
+    }
+
+    /* ========================================================
+       4. MÀN HÌNH 2: NÚT "KHÔNG THÈM" NÉ CHẠY & NÚT "MUỐN LẮM LUÔN" TO RA
+       ======================================================== */
+    let runawayCount = 0;
+    let yesBtnScale = 1;
+    const runawayMessages = [
+      "Ơ kìa bấm nút hồng bên kia đi mà! 🥺",
+      "Nút này né rồi nè, không bấm được đâu! 😜",
+      "Anh biết em muốn nhận quà lắm mà! 💖",
+      "Chạy đâu cho thoát khỏi tình yêu này! 🥰",
+      "Bấm nút 'Muốn lắm luôn' mau lên nèee! 🌹"
+    ];
+
+    function handleRunawayNoButton(e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      runawayCount++;
+
+      // 1. Phóng to nút "Muốn lắm luôn"
+      yesBtnScale += 0.12;
+      btnYes.style.transform = `scale(${yesBtnScale})`;
+
+      // 2. Hiển thị câu trêu đùa ngẫu nhiên
+      runawayNotice.textContent = runawayMessages[runawayCount % runawayMessages.length];
+      runawayNotice.classList.add('visible');
+
+      // 3. Di chuyển nút "Không thèm" sang vị trí ngẫu nhiên an toàn trong khung nhìn
+      const cardRect = document.getElementById('question-card').getBoundingClientRect();
+      const btnRect = btnNo.getBoundingClientRect();
+
+      // Giữ nút "Không thèm" ở vị trí fixed/absolute ngẫu nhiên
+      const padding = 20;
+      const maxX = window.innerWidth - btnRect.width - padding;
+      const maxY = window.innerHeight - btnRect.height - padding;
+
+      const randomX = Math.max(padding, Math.floor(Math.random() * maxX));
+      const randomY = Math.max(padding + 60, Math.floor(Math.random() * maxY));
+
+      btnNo.style.position = 'fixed';
+      btnNo.style.left = `${randomX}px`;
+      btnNo.style.top = `${randomY}px`;
+      btnNo.style.transform = `rotate(${(Math.random() - 0.5) * 30}deg)`;
+    }
+
+    // Sự kiện di chuột & Chạm điện thoại cho nút "Không thèm"
+    btnNo.addEventListener('mouseenter', handleRunawayNoButton);
+    btnNo.addEventListener('touchstart', handleRunawayNoButton, { passive: false });
+    btnNo.addEventListener('click', handleRunawayNoButton);
+
+    // Khi bạn gái bấm "Muốn lắm luôn 💖" -> Chuyển sang Màn hình 3
+    btnYes.addEventListener('click', () => {
+      // Bắn pháo hoa rực rỡ
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 100,
+          spread: 100,
+          origin: { y: 0.65 },
+          colors: ['#ff4b72', '#ff85a2', '#fbc2eb', '#ffd700', '#ffffff']
+        });
+      }
+
+      screenQuestion.classList.add('hidden');
+      screenExperience.classList.remove('hidden');
+
+      // Khởi động không trọng lực & gõ chữ
+      setupAntigravityExperience();
+      setTimeout(() => {
+        startTypewriterLetter(CONFIG.wishMessage);
+      }, 500);
+    });
+
+    /* ========================================================
+       5. MÀN HÌNH 3: TYPEWRITER CHO BỨC THƯ
+       ======================================================== */
+    let typewriterTimer = null;
+
+    function startTypewriterLetter(text) {
+      if (typewriterTimer) clearInterval(typewriterTimer);
+      typewriterContent.textContent = "";
+      cursorBlinking.style.display = "inline-block";
+      letterScrollArea.scrollTop = 0;
+
+      let index = 0;
+      const speed = 36; // Tốc độ gõ chữ (ms)
+
+      typewriterTimer = setInterval(() => {
+        if (index < text.length) {
+          typewriterContent.textContent += text.charAt(index);
+          index++;
+          letterScrollArea.scrollTop = letterScrollArea.scrollHeight;
+        } else {
+          clearInterval(typewriterTimer);
+        }
+      }, speed);
+    }
+
+    btnReplayLetter.addEventListener('click', () => {
+      startTypewriterLetter(CONFIG.wishMessage);
+    });
+
+    /* ========================================================
+       6. NÚT "NHẬN 1000 CÁI ÔM 🤗" & BẮN ICON TIM/HOA HỒNG BAY LÊN
+       ======================================================== */
+    let currentHugs = 1000;
+
+    function spawnFountainParticles(originX, originY) {
+      const icons = ['💖', '🌹', '🤗', '💕', '🌷', '✨', '💐', '💓', '🥰'];
+      const count = 12;
+
+      for (let i = 0; i < count; i++) {
+        setTimeout(() => {
+          const particle = document.createElement('div');
+          particle.className = 'fountain-particle';
+          particle.textContent = icons[Math.floor(Math.random() * icons.length)];
+          particle.style.left = `${originX}px`;
+          particle.style.top = `${originY}px`;
+
+          // Random hướng bay
+          const randX = (Math.random() - 0.5) * 260 + 'px';
+          const randY = (Math.random() * 80) + 'px';
+          const randRot = (Math.random() - 0.5) * 80 + 'deg';
+
+          particle.style.setProperty('--rand-x', randX);
+          particle.style.setProperty('--rand-y', randY);
+          particle.style.setProperty('--rand-rot', randRot);
+
+          document.body.appendChild(particle);
+
+          setTimeout(() => {
+            particle.remove();
+          }, 1600);
+        }, i * 45);
+      }
+    }
+
+    btnSendHugs.addEventListener('click', (e) => {
+      // Tăng bộ đếm
+      currentHugs += 1000;
+      hugCounter.textContent = currentHugs.toLocaleString();
+      hugCounter.classList.add('pop');
+      setTimeout(() => hugCounter.classList.remove('pop'), 200);
+
+      // Tọa độ bắn từ nút bấm
+      const rect = btnSendHugs.getBoundingClientRect();
+      const originX = rect.left + rect.width / 2;
+      const originY = rect.top;
+
+      spawnFountainParticles(originX, originY);
+
+      // Hiệu ứng pháo giấy nhỏ
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 25,
+          angle: 90,
+          spread: 60,
+          origin: { x: originX / window.innerWidth, y: originY / window.innerHeight },
+          colors: ['#ff4b72', '#ff85a2', '#ffffff']
+        });
+      }
+    });
+
+    /* ========================================================
+       7. HỆ THỐNG ANTIGRAVITY (ẢNH POLAROID & BONG BÓNG LƠ LỬNG)
+       ======================================================== */
+    const physicsEntities = [];
+    let physicsLoopActive = false;
+
+    function setupAntigravityExperience() {
+      antigravityViewport.innerHTML = "";
+      physicsEntities.length = 0;
+
+      const screenW = window.innerWidth;
+      const screenH = window.innerHeight;
+
+      // 1. Dải ảnh kỷ niệm Polaroid
+      const photos = CONFIG.images.length > 0 ? CONFIG.images : BACKUP_IMAGES;
+      photos.forEach((src, i) => {
+        const card = document.createElement('div');
+        card.className = 'polaroid-item';
+
+        // Đặt vị trí ban đầu quanh mép trên và 2 bên để không che bức thư
+        let startX, startY;
+        if (i % 4 === 0) {
+          startX = 16 + Math.random() * 25;
+          startY = 50 + Math.random() * 30;
+        } else if (i % 4 === 1) {
+          startX = screenW - 125 - Math.random() * 25;
+          startY = 50 + Math.random() * 30;
+        } else if (i % 4 === 2) {
+          startX = 16 + Math.random() * 25;
+          startY = screenH - 220 - Math.random() * 40;
+        } else {
+          startX = screenW - 125 - Math.random() * 25;
+          startY = screenH - 220 - Math.random() * 40;
+        }
+
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = `Kỷ niệm ${i + 1}`;
+        img.onerror = function () {
+          this.src = BACKUP_IMAGES[i % BACKUP_IMAGES.length];
+        };
+
+        const caption = document.createElement('div');
+        caption.className = 'polaroid-caption';
+        caption.textContent = (CONFIG.captions && CONFIG.captions[i]) ? CONFIG.captions[i] : `Khoảnh khắc #${i + 1} 💕`;
+
+        card.appendChild(img);
+        card.appendChild(caption);
+        antigravityViewport.appendChild(card);
+
+        const entity = {
+          el: card,
+          type: 'card',
+          width: 110,
+          height: 140,
+          x: Math.max(10, Math.min(screenW - 120, startX)),
+          y: Math.max(10, Math.min(screenH - 150, startY)),
+          vx: (Math.random() - 0.5) * 0.75,
+          vy: (Math.random() - 0.5) * 0.75,
+          rot: (Math.random() - 0.5) * 18,
+          vRot: (Math.random() - 0.5) * 0.08,
+          isDragging: false,
+          dragOffsetX: 0,
+          dragOffsetY: 0,
+          hasMoved: false,
+          imgSrc: src,
+          captionText: caption.textContent
+        };
+
+        bindEntityDragEvents(entity);
+        physicsEntities.push(entity);
+      });
+
+      // 2. Bong bóng trái tim bay bổng
+      const bubbleIcons = ['💖', '🌸', '✨', '💕', '🌷', '🥰', '💌'];
+      const bubbleTotal = screenW < 500 ? 6 : 8;
+
+      for (let i = 0; i < bubbleTotal; i++) {
+        const bubble = document.createElement('div');
+        bubble.className = 'bubble-float-item';
+        const diameter = 44 + Math.floor(Math.random() * 16);
+        bubble.style.width = `${diameter}px`;
+        bubble.style.height = `${diameter}px`;
+
+        const span = document.createElement('span');
+        span.textContent = bubbleIcons[i % bubbleIcons.length];
+        bubble.appendChild(span);
+
+        antigravityViewport.appendChild(bubble);
+
+        const entity = {
+          el: bubble,
+          type: 'bubble',
+          width: diameter,
+          height: diameter,
+          x: Math.random() * (screenW - diameter),
+          y: Math.random() * (screenH - diameter),
+          vx: (Math.random() - 0.5) * 0.9,
+          vy: (Math.random() - 0.5) * 0.9,
+          rot: 0,
+          vRot: 0,
+          isDragging: false,
+          dragOffsetX: 0,
+          dragOffsetY: 0,
+          hasMoved: false
+        };
+
+        bindEntityDragEvents(entity);
+        physicsEntities.push(entity);
+      }
+
+      if (!physicsLoopActive) {
+        physicsLoopActive = true;
+        runAntigravityLoop();
+      }
+    }
+
+    // Xử lý kéo thả và chạm cảm ứng cho các vật thể không trọng lực
+    function bindEntityDragEvents(entity) {
+      const el = entity.el;
+      let startX = 0, startY = 0;
+
+      function onStart(cx, cy) {
+        entity.isDragging = true;
+        entity.hasMoved = false;
+        startX = cx;
+        startY = cy;
+        entity.dragOffsetX = cx - entity.x;
+        entity.dragOffsetY = cy - entity.y;
+        entity.vx = 0;
+        entity.vy = 0;
+        el.style.zIndex = 200;
+      }
+
+      function onMove(cx, cy) {
+        if (!entity.isDragging) return;
+        if (Math.abs(cx - startX) > 6 || Math.abs(cy - startY) > 6) {
+          entity.hasMoved = true;
+        }
+        entity.x = cx - entity.dragOffsetX;
+        entity.y = cy - entity.dragOffsetY;
+      }
+
+      function onEnd() {
+        if (!entity.isDragging) return;
+        entity.isDragging = false;
+        el.style.zIndex = '';
+
+        // Nếu chạm nhẹ (không kéo), mở xem ảnh phóng to
+        if (!entity.hasMoved && entity.type === 'card') {
+          openPhotoZoomModal(entity.imgSrc, entity.captionText);
+        }
+
+        // Lực văng nhẹ khi thả tay
+        entity.vx = (Math.random() - 0.5) * 1.3;
+        entity.vy = (Math.random() - 0.5) * 1.3;
+      }
+
+      // Chuột
+      el.addEventListener('mousedown', (e) => {
+        onStart(e.clientX, e.clientY);
+        function handleMouseMove(ev) { onMove(ev.clientX, ev.clientY); }
+        function handleMouseUp() {
+          onEnd();
+          window.removeEventListener('mousemove', handleMouseMove);
+          window.removeEventListener('mouseup', handleMouseUp);
+        }
+        window.addEventListener('mousemove', handleMouseMove);
+        window.addEventListener('mouseup', handleMouseUp);
+      });
+
+      // Cảm ứng điện thoại
+      el.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 1) {
+          onStart(e.touches[0].clientX, e.touches[0].clientY);
+        }
+      }, { passive: true });
+
+      el.addEventListener('touchmove', (e) => {
+        if (e.touches.length === 1 && entity.isDragging) {
+          onMove(e.touches[0].clientX, e.touches[0].clientY);
+        }
+      }, { passive: true });
+
+      el.addEventListener('touchend', onEnd);
+      el.addEventListener('touchcancel', onEnd);
+    }
+
+    // Vòng lặp vật lý trôi nổi tự nhiên 60fps
+    function runAntigravityLoop() {
+      const screenW = window.innerWidth;
+      const screenH = window.innerHeight;
+
+      physicsEntities.forEach(item => {
+        if (!item.isDragging) {
+          item.x += item.vx;
+          item.y += item.vy;
+          item.rot += item.vRot;
+
+          // Va chạm bật lại nhẹ nhàng ở mép màn hình
+          if (item.x <= 0) {
+            item.x = 0;
+            item.vx = Math.abs(item.vx);
+          } else if (item.x + item.width >= screenW) {
+            item.x = screenW - item.width;
+            item.vx = -Math.abs(item.vx);
+          }
+
+          if (item.y <= 0) {
+            item.y = 0;
+            item.vy = Math.abs(item.vy);
+          } else if (item.y + item.height >= screenH) {
+            item.y = screenH - item.height;
+            item.vy = -Math.abs(item.vy);
+          }
+        }
+
+        if (item.type === 'card') {
+          item.el.style.transform = `translate3d(${item.x}px, ${item.y}px, 0) rotate(${item.rot}deg)`;
+        } else {
+          item.el.style.transform = `translate3d(${item.x}px, ${item.y}px, 0)`;
+        }
+      });
+
+      requestAnimationFrame(runAntigravityLoop);
+    }
+
+    /* Modal phóng to xem chi tiết ảnh */
+    function openPhotoZoomModal(src, caption) {
+      modalImg.src = src;
+      modalImg.onerror = function () {
+        this.src = BACKUP_IMAGES[0];
+      };
+      modalCaption.textContent = caption || "Khoảnh khắc đáng nhớ 💕";
+      photoModal.classList.add('active');
+    }
+
+    modalClose.addEventListener('click', () => {
+      photoModal.classList.remove('active');
+    });
+
+    photoModal.addEventListener('click', (e) => {
+      if (e.target === photoModal) {
+        photoModal.classList.remove('active');
+      }
+    });
+
+    /* ========================================================
+       8. NỀN BỤI SAO LẤP LÁNH (CANVAS STARS)
+       ======================================================== */
+    const starCanvas = document.getElementById('stars-canvas');
+    const starCtx = starCanvas.getContext('2d');
+    let starParticles = [];
+
+    function initStars() {
+      starCanvas.width = window.innerWidth;
+      starCanvas.height = window.innerHeight;
+      starParticles = [];
+      const total = Math.floor((starCanvas.width * starCanvas.height) / 13000);
+      for (let i = 0; i < total; i++) {
+        starParticles.push({
+          x: Math.random() * starCanvas.width,
+          y: Math.random() * starCanvas.height,
+          radius: Math.random() * 1.5 + 0.4,
+          alpha: Math.random(),
+          speed: Math.random() * 0.02 + 0.005
+        });
+      }
+    }
+
+    function renderStarsLoop() {
+      starCtx.clearRect(0, 0, starCanvas.width, starCanvas.height);
+      starParticles.forEach(star => {
+        star.alpha += star.speed;
+        if (star.alpha > 1 || star.alpha < 0) {
+          star.speed = -star.speed;
+        }
+        starCtx.beginPath();
+        starCtx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+        starCtx.fillStyle = `rgba(255, 255, 255, ${Math.abs(star.alpha) * 0.75})`;
+        starCtx.shadowBlur = 6;
+        starCtx.shadowColor = '#ffffff';
+        starCtx.fill();
+      });
+      requestAnimationFrame(renderStarsLoop);
+    }
+
+    window.addEventListener('resize', initStars);
+    initStars();
+    renderStarsLoop();
+  </script>
+</body>
+
+</html>
